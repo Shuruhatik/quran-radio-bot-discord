@@ -1,0 +1,27 @@
+{
+  "name": "quran-radio-bot-discord",
+  "description": "Bot By ShuruhatikYT",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "type": "module",
+  "author": "shuruhatik",
+  "license": "BSL-1.0 License",
+  "dependencies": {
+    "@discordjs/voice": "^0.8.0",
+    "chalk-animation": "^1.6.0",
+    "discord.js": "^14.0.0-dev.1649937833-b01f414",
+    "express": "^4.17.3",
+    "ffmpeg-static": "^5.0.0",
+    "inquirer": "^8.2.2",
+    "libsodium-wrappers": "^0.7.10",
+    "nanospinner": "^1.1.0",
+    "node": "^17.7.2",
+    "nodemon": "^2.0.15",
+    "quick.replit": "^1.0.3",
+    "st.db": "^4.0.7"
+  }
+}
