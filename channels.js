@@ -59,6 +59,18 @@ export default [{
   ar:"إذاعة أحمد العجمي",
   value:"https://Qurango.net/radio/ahmad_alajmy"
 },{
+  name:"ﺔﻳﺩﻮﻌﺴﻟﺍ ﺔﻟﻭﺩ ﻢﻳﺮﻜﻟﺍ ﻥﺍﺮﻘﻟﺍ ﺔﻋﺍﺫﺇ",
+  ar:"إذاعة القران الكريم دولة السعودية",
+  value:"http://n0e.radiojar.com/4wqre23fytzuv?rj-ttl=5&rj-tok=AAABgDTrkhEAsmBCfbT280gMag"
+},{
+  name:"ﺮﺼﻣ ﺔﻟﻭﺩ ﻢﻳﺮﻜﻟﺍ ﻥﺍﺮﻘﻟﺍ ﺔﻋﺍﺫﺇ",
+  ar:"إذاعة القران الكريم دولة مصر",
+  value:"http://n02.radiojar.com/v33ay8543d0uv?rj-ttl=5&rj-tok=AAABgDTqH90AIyBNaL5t4qE1IA"
+},{
+  name:"ﻦﻳﺮﺤﺒﻟﺍ ﺔﻟﻭﺩ ﻢﻳﺮﻜﻟﺍ ﻥﺍﺮﻘﻟﺍ ﺔﻋﺍﺫﺇ",
+  ar:"إذاعة القران الكريم دولة البحرين",
+  value:"https://prod-34-82-94-205.wostreaming.net/ihorizonsradio-sakfmmp3-ibc1?session-id=3453c3202479222be48941d99f762a88"
+},{
   name:"ﻱﺪﻣﺎﻐﻟﺍ ﺪﻌﺳ ﺔﻋﺍﺫﺇ",
   ar:"إذاعة سعد الغامدي",
   value:"https://Qurango.net/radio/saad_alghamdi"
