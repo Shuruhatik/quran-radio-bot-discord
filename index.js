@@ -101,32 +101,31 @@ async function startBot(){
      .listen(3000)
      console.log("\u001b[32m▣\u001b[0m \u001b[0mﺔﻄﺳﺍﻮﺑ ﺕﻮﺒﻟﺍ ﺔﺠﻣﺮﺑ ﻢﺗ \u001b[34;1mShuruhatik#2443\u001b[0m")
      console.log("\u001b[32m▣ \u001b[0m\u001b[0m\u001b[40;1m\u001b[34;1mhttps://"+process.env.REPL_ID+".id.repl.co/invite\u001b[0m")
-     startPlayRadio()
-     setInterval(() => startPlayRadio(),120000)
-   })
-   function startPlayRadio() {
-      let radio_url = config_delete_db.get(`radio_url`)
-      client.fetchInvite(config.voice_invite_link)
-      .then(async invite => {
+      client.fetchInvite(config.voice_invite_link).then(async invite => {
         let guild = await client.guilds.cache.get(invite.guild.id)
-        if(guild) {
+        if(guild){
           let voiceChannel = await guild.channels.cache.get(invite.channelId)
-          try{
-            let player = createAudioPlayer()
-            let resource = createAudioResource(radio_url)
-            let connection = joinVoiceChannel({
+          let connection = joinVoiceChannel({
               channelId: voiceChannel.id,
               guildId: voiceChannel.guild.id,
               adapterCreator: voiceChannel.guild.voiceAdapterCreator,
               group:client.user.id
-             })
-             connection.subscribe(player)
-             player.play(resource)
-           }catch(e){
-             // في حال ظهور اي خطا احذف الشرطين من سطر اسفل هذه التعليق لمعرفة اين الخطا
-            //console.error(e)
-           }
-          }
-        }).catch(console.error);
+         })
+         startPlayRadio(connection)
+         setInterval(() => startPlayRadio(connection),60000)
+        }
+      })
+   })
+   function startPlayRadio(connection) {
+     try{
+      let radio_url = config_delete_db.get(`radio_url`)
+      let player = createAudioPlayer()
+      let resource = createAudioResource(radio_url)
+       connection.subscribe(player)
+       player.play(resource)
+      } catch(e){
+         // في حال ظهور اي خطا احذف الشرطين من سطر اسفل هذه التعليق لمعرفة اين الخطا
+        //console.error(e)
+      }
   }
 }
