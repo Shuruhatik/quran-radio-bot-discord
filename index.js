@@ -6,7 +6,7 @@ import { createSpinner } from "nanospinner";
 import Database from "st.db";
 import ms from 'ms';
 import express from 'express';
-import radio_choices from "./channels.mjs";
+import radio_choices from "./channels.js";
 const app = express()
 import replit from "quick.replit"
 const config_db = new replit.Database(process.env["REPLIT_DB_URL"])
